@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#333333" >
+
+        <Gallery
+            android:id="@+id/addphoto_activity_imagegallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fadingEdge="none"
+            android:gravity="center"
+            android:spacing="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_rel_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#1b8140" >
+
+        <TextView
+            android:id="@+id/home_share"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/filter_and_share_button_selector"
+            android:drawableLeft="@drawable/share_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Share"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignBaseline="@+id/home_share"
+            android:layout_alignBottom="@+id/home_share"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/home_share"
+            android:background="@drawable/filter_and_share_button_selector"
+            android:drawableLeft="@drawable/filter_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="Filter"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/home_bottom_chartSizeCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:text="@string/chartSize"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/home_rel_bottom"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/relativeLayout1"
+        android:background="@drawable/green_bg" >
+
+        
+        <ViewFlipper
+            android:id="@+id/view_flipper"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_curve_bg"
+            android:padding="10dp" >
+
+            <!-- Layout for Potential Trigger start -->
+
+            <RelativeLayout
+                android:id="@+id/home_rel_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_top"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Potential Triggers"
+                        android:textColor="#1b8140"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/home_rel_center_top_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/home_rel_center_top_txt_title"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_potential_trigger_txt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_rel_center_top_txt_title"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/PT_SubTitle"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                         />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_below"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_rel_center_top" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_txt_NoRecord"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="There are no migraine records in the diary"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/home_rel_center_below_pie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" >
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:id="@+id/home_rel_center_top_potential_trigger_scroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/home_rel_center_below_pie" >
+
+                        <LinearLayout
+                            android:id="@+id/lin_bottom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp" >
+                        </LinearLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!-- Layout for Potential Trigger Stop -->
+
+
+            <!-- Layout for Trigger Exposure Start -->
+
+            <RelativeLayout
+                android:id="@+id/home_rel_center_trigger_exposure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_top_trigger_exposure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_trigger_exposure_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Triggers Exposure"
+                        android:textColor="#1b8140"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/home_rel_center_top_trigger_exposure_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/home_rel_center_top_trigger_exposure_txt_title"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_trigger_exposure_txt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_rel_center_top_trigger_exposure_view"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/TE_SubTitle"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                         />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/home_rel_center_top_trigger_exposure_scroll_txt_NoRecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/home_rel_center_top_trigger_exposure"
+                    android:gravity="center"
+                    android:text="There are no migraine records in the diary"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/home_rel_center_top_trigger_exposure_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_rel_center_top_trigger_exposure" >
+
+                    <LinearLayout
+                        android:id="@+id/home_rel_center_trigger_exposure_lin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal" >
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <!-- Layout for Trigger Exposure Stop -->
+
+
+            <!-- Layout for Symptom Frequency Start -->
+
+            <RelativeLayout
+                android:id="@+id/home_rel_center_symptom_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_top_symptom_frequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_symptom_frequency_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Symptom Frequency"
+                        android:textColor="#1b8140"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/home_rel_center_top_symptom_frequency_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/home_rel_center_top_symptom_frequency_txt_title"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_symptom_frequency_txt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_rel_center_top_symptom_frequency_view"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/SF_SubTitle"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                         />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/home_rel_center_top_symptom_frequency_scroll_txt_NoRecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/home_rel_center_top_symptom_frequency"
+                    android:gravity="center"
+                    android:text="There are no migraine records in the diary"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/home_rel_center_top_symptom_frequency_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_rel_center_top_symptom_frequency" >
+
+                    <LinearLayout
+                        android:id="@+id/home_rel_center_symptom_frequency_lin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal" >
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <!-- Layout for Symptom Frequency Stop -->
+
+
+            <!-- Layout for Pain Location Start -->
+
+            <RelativeLayout
+                android:id="@+id/home_rel_center_pain_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_top_pain_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_pain_location_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pain Location"
+                        android:textColor="#1b8140"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/home_rel_center_top_pain_location_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/home_rel_center_top_pain_location_txt_title"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_pain_location_txt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_rel_center_top_pain_location_view"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/PL_SubTitle"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                        />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/home_rel_center_top_pain_location_scroll_txt_NoRecord"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_below="@+id/home_rel_center_top_pain_location"
+                    android:gravity="center"
+                    android:text="There are no migraine records in the diary"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="15sp"
+                    android:visibility="gone" />
+
+                <ScrollView
+                    android:id="@+id/home_rel_center_top_pain_location_scroll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_rel_center_top_pain_location" >
+
+                    <LinearLayout
+                        android:id="@+id/home_rel_center_pain_location_lin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal" >
+                    </LinearLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+            <!-- Layout for Pain Location Stop -->
+
+
+            <!-- Layout for Pain Level start -->
+
+            <RelativeLayout
+                android:id="@+id/home_rel_center_pain_level"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_top_pain_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_pain_level_txt_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pain Level"
+                        android:textColor="#1b8140"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:id="@+id/home_rel_center_top_pain_level_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="1dp"
+                        android:layout_below="@+id/home_rel_center_top_pain_level_txt_title"
+                        android:layout_marginTop="2dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TextView
+                        android:id="@+id/home_rel_center_top_pain_level_txt_subtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/home_rel_center_top_pain_level_txt_title"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/PLevel_SubTitle"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp"
+                         />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/home_rel_center_below_pain_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_rel_center_top_pain_level" >
+
+                    <TextView
+                        android:id="@+id/home_rel_center_below_pain_level_txt_NoRecord"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:text="There are no migraine records in the diary"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="15sp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/home_rel_center_below_pie_pain_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="170dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp" >
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:id="@+id/home_rel_center_top_pain_level_scroll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/home_rel_center_below_pie_pain_level" >
+
+                        <LinearLayout
+                            android:id="@+id/home_rel_center_below_pie_lin_pain_level"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp" >
+                        </LinearLayout>
+                    </ScrollView>
+                </RelativeLayout>
+            </RelativeLayout>
+            <!-- Layout for Pain Level stop -->
+
+        </ViewFlipper>
+
+        
+         <ProgressBar
+            android:id="@+id/progressBar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+             />
+        
+        
+    </RelativeLayout>
+
+</RelativeLayout>

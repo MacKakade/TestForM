@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/green_bg" >
+
+    <LinearLayout
+        android:id="@+id/learnButtonPanel"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/learn_bg"
+        android:orientation="vertical"
+        android:paddingTop="100dp" >
+
+        <Button
+            android:id="@+id/btnWhatisMigraine"
+            style="@style/black_bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+        	android:layout_marginRight="20dp"
+            android:background="@drawable/button_white"
+            android:drawableRight="@drawable/ic_button_dark_arrow"
+            android:gravity="left|center_vertical"
+            android:text="@string/what_is_migraine_" />
+
+        <Button
+            android:id="@+id/btnCopingWithMigraine"
+            style="@style/black_bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+        	android:layout_marginRight="20dp"
+            android:background="@drawable/button_white"
+            android:drawableRight="@drawable/ic_button_dark_arrow"
+            android:gravity="left|center_vertical"
+            android:text="@string/coping_with_migraines" />
+
+        <Button
+            android:id="@+id/btnMigraineTriggers"
+            style="@style/black_bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="20dp"
+        	android:layout_marginRight="20dp"
+            android:background="@drawable/button_white"
+            android:drawableRight="@drawable/ic_button_dark_arrow"
+            android:gravity="left|center_vertical"
+            android:text="@string/migraine_triggers" />
+
+        <Button
+            android:id="@+id/btnUsingThisApp"
+            style="@style/black_bold_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+        	android:layout_marginRight="20dp"
+            android:background="@drawable/button_white"
+            android:drawableRight="@drawable/ic_button_dark_arrow"
+            android:gravity="left|center_vertical"
+            android:text="@string/using_this_application" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/learn_lady" />
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/green_bg" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="15dp"
+        android:background="@android:color/white" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/terms_and_conditions"
+            android:textColor="#277C41"
+            android:textSize="25sp" />
+
+        <CheckBox
+            android:id="@+id/terms_and_conditions_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp"
+            android:button="@drawable/checkbox_selector"
+            android:text="@string/checkbox_terms_string"
+            android:gravity="center_vertical"
+            android:textStyle="bold"
+            android:textSize="12sp" />
+
+        <ScrollView
+            android:id="@+id/terms_and_conditions_scroll"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/terms_and_conditions_checkbox"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/textView1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp" >
+
+            <WebView
+                android:id="@+id/terms_and_condition_webview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+            </WebView>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

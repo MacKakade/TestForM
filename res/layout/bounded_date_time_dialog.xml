@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/BoundedDateTimeDialog"
+      android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+    android:background="@android:color/white" >
+
+    <com.novartis.mymigraine.common.BoundedDatePicker
+        android:id="@+id/BoundedDatePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/ControlButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BoundedDatePicker"
+        android:gravity="center"
+        android:padding="5dip" >
+
+        <Button
+            android:id="@+id/SetDateTime"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:textColor="@android:color/white"
+            android:textSize="15sp"
+            android:background="@drawable/done_btn_selector"
+            android:text="@android:string/ok" />
+
+        <!--
+        <Button
+            android:id="@+id/ResetDateTime"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reset" />
+
+        <Button
+            android:id="@+id/CancelDialog"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@android:string/cancel" />
+        -->
+    </LinearLayout>
+</RelativeLayout>

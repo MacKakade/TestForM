@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="pi_chart_size">350</integer>
+    <string name="list_plevel_barchart_scale_x">0.75</string>
+	<string name="list_plevel_barchart_scale_y">0.7571</string>
+</resources>

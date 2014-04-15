@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/action_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/home_action_title"
+        android:textColor="@android:color/white"
+        android:textSize="9sp"
+        android:textStyle="bold" />
+
+    <!-- <RelativeLayout
+        android:id="@+id/titlePanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp" >
+
+        <TextView
+            android:id="@+id/action_TM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/action_title"
+            android:paddingTop="5dp"
+            android:text="TM"
+            android:textColor="@android:color/white"
+            android:textSize="3sp"
+            android:textStyle="bold" />
+    </RelativeLayout> -->
+
+    <TextView
+        android:id="@+id/action_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/action_title"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="4dp"
+        android:paddingLeft="5dp"
+        android:text="@string/home_action_subtitle"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

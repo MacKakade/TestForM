@@ -1,0 +1,132 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="YourThemeName" parent="@android:Theme.Black">
+
+        <!-- Tell Android to use a custom style when creating a ToggleButton -->
+        <item name="android:buttonStyleToggle">@style/Widget.Button.Toggle</item>
+        <item name="android:textOn"></item>
+        <item name="android:textOff"></item>
+        <!-- Perhaps more theme items here...? -->
+    </style>
+
+    <style name="Widget.Button.Toggle" parent="android:Widget">
+        <item name="android:background">@drawable/btn_switch_bg</item>
+        <item name="android:disabledAlpha">?android:attr/disabledAlpha</item>
+    </style>
+
+    <!-- vinay -->
+    <style name="red_header_font">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_red</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="red_label_font">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_red</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="black_bold_font">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="black_bold_font_medium">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--
+    <style name="menuItemMyDiaryTheme" parent="@style/Theme.Sherlock">
+        <item name="android:selectableItemBackground">@drawable/ic_tab_mydiary_selected</item>
+        <item name="android:actionBarItemBackground">@drawable/ic_tab_mydiary_unselected</item>
+    </style>
+    -->
+    <style name="activity_background">
+        <item name="android:background">@drawable/green_bg</item>
+    </style>
+
+    <style name="my_diary_background">
+        <item name="android:background">@drawable/main_background</item>
+    </style>
+
+    <style name="rounded_border">
+        <item name="android:background">@drawable/rounded_corner_border</item>
+    </style>
+
+    <style name="toggle_button_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/toggle_button</item>
+        <item name="android:textColor">@drawable/button_text_selector</item>
+    </style>
+
+    <style name="selected_button_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_selected</item>
+        <item name="android:textColor">@drawable/button_text_selector</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="green_button_style">
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/green_button_selector</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+    
+
+    <!-- <style name="Theme.MyMigraineTheme" parent="Theme.Sherlock.Light">
+
+        <item name="android:actionBarStyle">@style/Theme.MyAppTheme.ActionBar</item>
+        <item name="actionBarStyle">@style/Theme.MyMigraineTheme.ActionBar</item>
+    </style>
+
+    <style name="Theme.MyMigraineTheme.ActionBar" parent="Widget.Sherlock.Light.ActionBar">
+        <item name="android:background">@drawable/actionbar_bg</item>
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="android:height">64dip</item>
+        <item name="height">64dip</item>
+        <item name="android:titleTextStyle">@style/Theme.MyAppTheme.ActionBar.TitleTextStyle</item>
+        <item name="titleTextStyle">@style/Theme.MyMigraineTheme.ActionBar.TitleTextStyle</item>
+        <item name="dropDownListViewStyle">@style/Theme.MyMigraineTheme.ActionBar.OverflowMenuStyle</item>
+        </style>
+
+    <style name="Theme.MyMigraineTheme.ActionBar.TitleTextStyle" parent="TextAppearance.Sherlock.Widget.ActionBar.Title">
+        <item name="android:textColor">#fff</item>
+        <item name="textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textStyle">bold</item>
+        <item name="android:textSize">32sp</item>
+        <item name="textSize">32sp</item>
+    </style>
+
+    <style name="Theme.MyMigraineTheme.ActionBar.OverflowMenuStyle" parent="@style/Widget.Sherlock.Light.Spinner.DropDown.ActionBar">
+        <item name="android:popupBackground">@color/actionbar_overflow_bg</item>
+    </style> -->
+    
+    
+    
+
+</resources>

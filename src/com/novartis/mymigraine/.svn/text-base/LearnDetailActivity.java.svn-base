@@ -1,0 +1,114 @@
+package com.novartis.mymigraine;
+
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.Window;
+import android.webkit.WebView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuItem;
+import com.flurry.android.FlurryAgent;
+import com.novartis.mymigraine.common.Constant;
+
+public class LearnDetailActivity extends SherlockActivity
+{
+	private RelativeLayout learnDetailPanel;
+	private ActionBar actionBar;
+	//private MenuItem menuItemMyDiary, menuItemChart, menuItemLearn;
+	@Override
+	protected void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_learn_detail);
+		learnDetailPanel=(RelativeLayout) findViewById(R.id.learnDetailPanel);
+		//this.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		//getSupportActionBar().setTitle("Learn");
+		//getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		//getSupportActionBar().hide();
+		actionBar = getSupportActionBar();
+		createActionBar();
+		
+		String url=getIntent().getExtras().getString(Constant.Url);
+		WebView mWebView=new WebView(LearnDetailActivity.this);
+	    mWebView.getSettings().setJavaScriptEnabled(true);
+	    mWebView.getSettings().setBuiltInZoomControls(true);
+	 
+	   // mWebView.getSettings().setPluginsEnabled(true);
+	    mWebView.loadUrl(url);
+	    learnDetailPanel.addView(mWebView);
+	}
+	private void createActionBar() {
+		// actionBar.setDisplayShowTitleEnabled(false);
+//		actionBar.setBackgroundDrawable(getResources().getDrawable(
+//				R.drawable.actionbar_bg));
+//		actionBar.setDisplayShowCustomEnabled(true);
+		actionBar.setDisplayShowTitleEnabled(false);
+//		actionBar.setIcon(android.R.color.transparent);
+//
+//		LayoutInflater inflator = (LayoutInflater) this
+//				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//		View v = inflator.inflate(R.layout.actionbar_title, null);
+//
+//		((TextView) v.findViewById(R.id.action_title)).setText(Html
+//				.fromHtml(getString(R.string.home_action_title)));
+//		((TextView) v.findViewById(R.id.action_subtitle)).setText(Html
+//				.fromHtml(getString(R.string.home_action_subtitle)));
+//
+//		actionBar.setCustomView(v);
+		actionBar.setIcon(getResources().getDrawable(R.drawable.ic_actionbar_title));
+		actionBar.setDisplayHomeAsUpEnabled(true);
+		actionBar.setDisplayShowHomeEnabled(true);
+		// actionBar.setDisplayUseLogoEnabled(false);
+		 actionBar.setHomeButtonEnabled(true);
+	}
+//	@Override
+//	public boolean onCreateOptionsMenu(Menu menu) {
+//		super.onCreateOptionsMenu(menu);
+//
+//		getSupportMenuInflater().inflate(R.menu.activity_learn, menu);
+//
+//		menuItemMyDiary = menu.findItem(R.id.menu_mydiary);
+//		menuItemChart = menu.findItem(R.id.menu_charts);
+//		menuItemLearn = menu.findItem(R.id.menu_learn);
+//		activateLearn();
+//		return true;
+//
+//	}
+//	private void activateLearn() {
+//		menuItemMyDiary.setIcon(R.drawable.ic_tab_mydiary_unselected);
+//		menuItemChart.setIcon(R.drawable.ic_tab_charts_unselected);
+//		menuItemLearn.setIcon(R.drawable.ic_tab_learn_selected);
+//	}
+//
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch (item.getItemId()) {
+		case android.R.id.home:
+
+			onBackPressed();
+			// getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+			// getSupportActionBar().setDisplayShowTitleEnabled(false);
+			break;
+		}
+		return true;
+	}
+	@Override
+	protected void onStart() {
+		
+		super.onStart();
+		FlurryAgent.onStartSession(this, getString(R.string.flurry_analytics_api_key));
+	}
+	@Override
+	protected void onStop() {
+		super.onStop();
+		FlurryAgent.onEndSession(this);
+	}
+}

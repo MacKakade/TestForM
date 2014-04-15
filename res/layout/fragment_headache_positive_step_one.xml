@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:migraine="http://schemas.android.com/apk/res/com.novartis.mymigraine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/txtViewWhenStart"
+                style="@style/red_label_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/when_did_it_start_" />
+
+            <View
+                android:id="@+id/deviderWhenStart"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewWhenStart"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <!--
+             <com.dmi.migrainetrigger.ui.component.HourPickerControl
+            android:id="@+id/startHourPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtViewWhenStart"
+            android:layout_margin="10dp"
+            migraine:hourFormat="&apos;Started&apos; h a" />
+            -->
+
+            <Button
+                android:id="@+id/btnStartHourPicker"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderWhenStart"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_white"
+                android:gravity="left|center_vertical"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtViewHowLast"
+                style="@style/red_label_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnStartHourPicker"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/how_long_did_it_last_" />
+
+            <View
+                android:id="@+id/deviderHowLast"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewHowLast"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <!--
+                 <com.dmi.migrainetrigger.ui.component.HourPickerControl
+                android:id="@+id/howLongLastPicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtViewHowLast"
+                android:layout_margin="10dp"
+                migraine:hourFormat="hh:00 &apos;hours&apos;" />
+            -->
+
+            <Button
+                android:id="@+id/btnHowLongLastPicker"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderHowLast"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_white"
+                android:gravity="left|center_vertical"
+                android:text="" />
+
+            <TextView
+                android:id="@+id/txtViewIntensePain"
+                style="@style/red_label_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnHowLongLastPicker"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/how_intense_was_the_pain_" />
+
+            <View
+                android:id="@+id/deviderIntensePain"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewIntensePain"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/intensePainButtonPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderIntensePain"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal" >
+
+                <com.novartis.mymigraine.common.PainIntenseButton
+                    android:id="@+id/btnIntensePainMild"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    migraine:intenseLevel="mild" />
+
+                <com.novartis.mymigraine.common.PainIntenseButton
+                    android:id="@+id/btnIntensePainModerate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    migraine:intenseLevel="moderate" />
+
+                <com.novartis.mymigraine.common.PainIntenseButton
+                    android:id="@+id/btnIntensePainSevere"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    migraine:intenseLevel="severe" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtViewLocationOfPain"
+                style="@style/red_label_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/intensePainButtonPanel"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/location_of_pain_" />
+
+            <View
+                android:id="@+id/deviderLocationOfPain"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewLocationOfPain"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <LinearLayout
+                android:id="@+id/locationOfPainPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtViewLocationOfPain"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical" >
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

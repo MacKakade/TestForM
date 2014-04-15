@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green">#1B8140</color>
+    <color name="light_gray">#DFDFDF</color>
+    <color name="dark_green">#03441C</color>
+    <!-- vinay -->
+     <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="dark_red">#BF0000</color>
+    <color name="light_red">#FF0000</color>
+    <color name="orange">#FF8200</color>
+    <!-- <color name="green">#007F01</color> -->
+    <color name="light_grey">#DDDDDD</color>
+    <color name="step_panel_bg_color">#3F7D27</color>
+    <!-- <color name="button_selected_color">#00649C</color> -->
+    <color name="button_selected_color">#1B8140</color>
+   <!--  <color name="button_selected_border_color">#1A5B81</color> -->
+    <color name="button_selected_border_color">#1B8140</color>
+    
+    <color name="button_color">#DEDEDE</color>
+    <color name="button_border_color">#CECECE</color>
+    <!-- <color name="pain_intense_mild_color">#E8B30C</color>
+    <color name="pain_intense_moderate_color">#EC6903</color>
+    <color name="pain_intense_severe_color">#B23027</color> -->
+    <color name="pain_intense_mild_color">#ecb311</color>
+    <color name="pain_intense_moderate_color">#e86c00</color>
+    <color name="pain_intense_severe_color">#b72e2b</color>
+    <color name="list_devider_color">#D3D3D3</color>
+    <color name="devider_color">#bebebe</color>
+    
+    
+    <color name="mild">#DBB311</color>
+    <color name="moderate">#E86C00</color>
+    <color name="severe">#BA2E2B</color>
+    <color name="actionbar_overflow_bg">#03441b</color>
+    <color name="pressed_mymigraine">#CC05963B</color>
+    
+</resources>

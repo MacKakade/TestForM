@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MigraineTriggerMainActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/imgViewDiaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/migraine_diary"
+                android:src="@drawable/my_diary_logo" />
+
+            <TextView
+                android:id="@+id/txtViewNewEntry"
+                style="@style/red_header_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgViewDiaryTitle"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/new_entry" />
+
+            <View
+                android:id="@+id/deviderNewEntry"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewNewEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <Button
+                android:id="@+id/btnNewEntry"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderNewEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/button_white"
+                android:gravity="left|center_vertical"
+                android:text="@string/today" />
+
+            <TextView
+                android:id="@+id/txtViewHeadache"
+                style="@style/red_header_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnNewEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/did_you_have_a_headache_" />
+
+            <View
+                android:id="@+id/deviderHeadache"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewHeadache"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <Button
+                android:id="@+id/btnHeadacheYes"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderHeadache"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_no_border"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/yes_i_had_a_headache" />
+
+            <View
+                android:id="@+id/deviderHeadacheYes"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btnHeadacheYes"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/list_devider_color" >
+            </View>
+
+            <Button
+                android:id="@+id/btnHeadacheNo"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderHeadacheYes"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_no_border"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/no_i_did_not" />
+
+            <View
+                android:id="@+id/deviderHeadacheNo"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btnHeadacheNo"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/list_devider_color" >
+            </View>
+
+            <TextView
+                android:id="@+id/txtViewPreviousEntry"
+                style="@style/red_header_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderHeadacheNo"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/edit_a_previous_entry" />
+
+            <View
+                android:id="@+id/deviderPreviousEntry"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_below="@+id/txtViewPreviousEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/devider_color" >
+            </View>
+
+            <Button
+                android:id="@+id/btnViewPreviousEntry"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/deviderPreviousEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_no_border"
+                android:drawableRight="@drawable/arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/view_previous_entries" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/btnViewPreviousEntry"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/list_devider_color" >
+            </View>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

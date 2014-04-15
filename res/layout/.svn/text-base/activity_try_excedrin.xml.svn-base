@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/activity_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollViewTryExcedrin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/tryExcedrinPanel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/try_exc_bg"
+            android:paddingRight="20dp"
+            android:paddingBottom="50dp" >
+
+            <EditText
+                android:id="@+id/editTextEmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/enter_email_id"
+                android:inputType="textEmailAddress" />
+
+            <ImageButton
+                android:id="@+id/btnGetYourCoupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_below="@+id/editTextEmailId"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/get_your_coupon"
+                android:src="@drawable/get_your_coupen_selector" />
+
+            <Button
+                android:id="@+id/btnCaplets"
+                style="@style/black_bold_font"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="20dp"
+                
+               
+                android:background="@drawable/button_white"
+                android:drawableRight="@drawable/ic_button_dark_arrow"
+                android:gravity="left|center_vertical"
+                android:text="@string/caplets" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

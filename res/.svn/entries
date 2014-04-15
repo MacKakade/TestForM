@@ -1,0 +1,85 @@
+10
+
+dir
+141
+https://202.131.112.59/projects/my_migraine/Code/Android/MyMigraine/res
+https://202.131.112.59/projects/my_migraine
+
+
+
+2013-08-03T05:21:52.311173Z
+141
+mihir.palkhiwala
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+fd73cfde-2c95-493f-8f05-a03b2dbe03da
+
+drawable
+dir
+
+drawable-xxhdpi
+dir
+
+anim
+dir
+
+values-1184x768
+dir
+
+drawable-nodpi
+dir
+
+values-1920x1080
+dir
+
+drawable-xhdpi
+dir
+
+values-960x540
+dir
+
+values
+dir
+
+drawable-hdpi-960x540
+dir
+
+drawable-hdpi
+dir
+
+menu
+dir
+
+values-v11
+dir
+
+drawable-ldpi
+dir
+
+values-v14
+dir
+
+values-1280x720
+dir
+
+drawable-mdpi
+dir
+
+layout
+dir
+
+drawable-xxhdpi-1920x1080
+dir
+

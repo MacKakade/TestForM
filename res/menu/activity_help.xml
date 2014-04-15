@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/menu_mydiary"
+        android:icon="@drawable/ic_tab_mydiary_unselected"
+        android:showAsAction="always|withText"
+        android:title="My Diary"/>
+    <item
+        android:id="@+id/menu_charts"
+        android:icon="@drawable/ic_tab_charts_unselected"
+        android:showAsAction="always|withText"
+        android:title="Charts"/>
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/ic_tab_learn_selected"
+        android:showAsAction="always|withText"
+        android:title="Help"/>
+    <item
+        android:id="@+id/menu_overflow"
+        android:icon="@drawable/menu_overflow_dark"
+        android:showAsAction="always"
+        android:title="More">
+        <menu>
+
+            <!--
+                <item
+                android:id="@+id/menu_diary_log"
+                android:icon="@drawable/tab_diarylog"
+                android:title="Diary Log"/>
+            -->
+            <item
+                android:id="@+id/menu_diary_log"
+                android:title="Diary Log"/>
+            <item
+                android:id="@+id/menu_try_excedrin"
+                android:title="Try Excedrin"/>
+            <item
+                android:id="@+id/menu_learn"
+                android:title="Learn"/>
+            <item
+                android:id="@+id/menu_setting"
+                android:title="Settings"/>
+        </menu>
+    </item>
+
+</menu>

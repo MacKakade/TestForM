@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HourPickerControl">
+        <attr name="hourFormat" format="string" />
+    </declare-styleable>
+    <declare-styleable name="PainIntenseButton" format="enum">
+        <attr name="intenseLevel">
+            <enum name="mild" value="0" />
+            <enum name="moderate" value="1" />
+            <enum name="severe" value="2" />
+        </attr>
+        <attr name="isSelected" format="boolean"></attr>
+    </declare-styleable>
+    <!-- used to set the minTextSize via xml -->
+    <attr name="autoScaleTextViewStyle" format="reference" />
+
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+    
+
+</resources>

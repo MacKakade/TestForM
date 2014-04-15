@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background" >
+
+    <!-- Relative layout for generating chart -->
+
+    <RelativeLayout
+        android:id="@+id/home_rel_center"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible" >
+
+        <!-- for Potential Trigger start -->
+
+        <RelativeLayout
+            android:id="@+id/home_rel_center_below"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/home_rel_center_below_pie"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" >
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/home_rel_center_top_potential_trigger_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/home_rel_center_below_pie" >
+
+                <LinearLayout
+                    android:id="@+id/lin_bottom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp" >
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <!-- for Potential Trigger Stop -->
+
+
+        <!-- for Trigger Exposure Start -->
+
+        <ScrollView
+            android:id="@+id/home_rel_center_top_trigger_exposure_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/home_rel_center_trigger_exposure_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- for Trigger Exposure Stop -->
+
+
+        <!-- Layout for Symptom Frequency Start -->
+
+        <ScrollView
+            android:id="@+id/home_rel_center_top_symptom_frequency_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/home_rel_center_symptom_frequency_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Layout for Symptom Frequency Stop -->
+
+
+        <!-- Layout for Pain Location Start -->
+
+        <ScrollView
+            android:id="@+id/home_rel_center_top_pain_location_scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/home_rel_center_pain_location_lin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" >
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Layout for Pain Location Stop -->
+
+
+        <!-- Layout for Pain Level start -->
+
+        <RelativeLayout
+            android:id="@+id/home_rel_center_below_pain_level"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:id="@+id/home_rel_center_below_pie_pain_level"
+                android:layout_width="wrap_content"
+                android:layout_height="170dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" >
+            </LinearLayout>
+
+            <ScrollView
+                android:id="@+id/home_rel_center_top_pain_level_scroll"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/home_rel_center_below_pie_pain_level" >
+
+                <LinearLayout
+                    android:id="@+id/home_rel_center_below_pie_lin_pain_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp" >
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="15dp" >
+
+        <TextView
+            android:id="@+id/share_tet_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/share_with_your_doctor_by_printing_or_email_your_data"
+            android:textColor="#1D5572"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <!--
+             <View
+            android:id="@+id/share_view1"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/share_tet_top"
+            android:layout_marginTop="5dp"
+            android:background="#D3D3D3" />
+        -->
+
+
+        <!--
+             <TextView
+            android:id="@+id/share_textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_view1"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/choose_start_date_selector"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="Choose a start date"
+            android:textColor="#BC062D"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+        -->
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_tet_top"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/filter_btn_chooseDate"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:background="@color/light_gray"
+                android:text="Choose Date"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/filter_btn_setPeriod"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@color/light_gray"
+                android:text="Set Period"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/share_view2"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_view2"
+            android:layout_marginTop="10dp" >
+
+            <ToggleButton
+                android:id="@+id/share_toggleChart"
+                style="@style/YourThemeName"
+                android:layout_width="80dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_switch_bg"
+                android:checked="true" />
+
+            <TextView
+                android:id="@+id/share_txt_include_chart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Include all charts"
+                style="@style/red_label_font" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/share_txt_include_chart"
+                android:paddingTop="3dp"
+                android:text="Add all your charts to the report"
+                android:textColor="@android:color/black"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/share_view3"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_marginTop="10dp"
+            android:background="#D3D3D3" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout7"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/share_view3"
+            android:layout_marginTop="10dp" >
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout3"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/share_view3" >
+
+                <ToggleButton
+                    android:id="@+id/share_toggleDiary"
+                    style="@style/YourThemeName"
+                    android:layout_width="80dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/btn_switch_bg"
+                    android:checked="true" />
+
+                <TextView
+                    android:id="@+id/share_txt_include_history"
+                    style="@style/red_label_font"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Include history file" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/share_txt_include_history"
+                    android:layout_toLeftOf="@+id/share_toggleDiary"
+                    android:paddingTop="3dp"
+                    android:text="Add every report you have made in the report"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/share_view4"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/relativeLayout3"
+                android:layout_marginTop="10dp"
+                android:background="#D3D3D3" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout7"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/share_btn_email"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/done_btn_selector"
+                    android:text="Email"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Makes a PDF attached to an Email"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical" >
+
+                <Button
+                    android:id="@+id/share_btn_print"
+                    android:layout_width="140dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/done_btn_selector"
+                    android:text="Print"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Requires a compatible printer"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Layout for Pain Level stop -->
+
+</RelativeLayout>

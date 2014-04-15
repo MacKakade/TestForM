@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.novartis.mymigraine"
+    android:versionCode="3"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="false"
+        android:xlargeScreens="false" />
+
+    <application
+        android:name="MyMigraineApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Mymigraine" >
+        <activity
+            android:name="com.novartis.mymigraine.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.novartis.mymigraine.TermsAndConditions"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.novartis.mymigraine.ChartActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.FilterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.novartis.mymigraine.ShareActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.novartis.mymigraine.PrintPDFActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.novartis.mymigraine.MigraineTriggerMainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.HeadachePositiveStepsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.HeadacheNegativeStepsActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.TryExcedrinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.PdfViewerActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.LearnActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.LearnDetailActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.AddYourOwnAnsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.HelpActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.DiaryLogDetailsActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.ViewSavedEntryActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.novartis.mymigraine.ViewPreviousEntryListActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+    </application>
+
+</manifest>

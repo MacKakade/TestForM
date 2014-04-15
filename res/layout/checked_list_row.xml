@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.novartis.mymigraine"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/checkbox_textview_pading"
+    android:paddingLeft="7dp"
+    android:paddingTop="@dimen/checkbox_textview_pading" >
+
+    <CheckBox
+        android:id="@+id/chkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:button="@drawable/checkbox_selector"
+        android:layout_centerVertical="true"
+        android:padding="5dp"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imgViewTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:padding="7dp"
+        android:src="@drawable/ic_question_mark"
+        android:visibility="gone" />
+
+    <com.novartis.mymigraine.common.AutoScaleTextView
+        android:id="@+id/chkBoxTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/imgViewTag"
+        android:layout_toRightOf="@+id/chkbox"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:text=""
+        android:layout_marginLeft="@dimen/checkbox_textview_margin"
+        android:textStyle="bold"
+        app:minTextSize="10sp" />
+
+    <!--
+         <CheckedTextView
+        android:id="@+id/chkTxtView"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:drawableLeft="?android:attr/listChoiceIndicatorMultiple"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dip" />
+    -->
+
+</RelativeLayout>

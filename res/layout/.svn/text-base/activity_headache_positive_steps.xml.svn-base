@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background" >
+
+    <FrameLayout
+        android:id="@+id/stepFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/stepPanel"
+        android:paddingBottom="5dp" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/stepPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/step_panel_bg_color"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/btnStepPrevious"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/previous_step"
+            android:padding="10dp"
+            android:src="@drawable/button_step_prev" />
+
+        <TextView
+            android:id="@+id/txtViewSteps"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btnStepNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/next_step"
+            android:padding="10dp"
+            android:src="@drawable/button_step_next" />
+    </RelativeLayout>
+
+</RelativeLayout>

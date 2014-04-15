@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/barchart_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="1dp"
+        android:paddingLeft="15dp"
+        android:textSize="11sp"
+        android:textColor="@android:color/black"
+        android:text="skipped" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_below="@+id/barchart_txt" >
+
+        <SeekBar
+            android:id="@+id/seekBar1"
+            android:layout_width="fill_parent"
+            android:layout_height="18dp"
+            android:progressDrawable="@drawable/seekbar_layer_list"
+            android:thumb="@null"
+             />
+
+        <TextView
+            android:id="@+id/barchart_percentage_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_below="@+id/barchart_txt"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+            android:textSize="10sp"
+            android:paddingLeft="15dp"
+            android:textStyle="bold"
+            android:text="100%" />
+    </RelativeLayout>
+
+</RelativeLayout>

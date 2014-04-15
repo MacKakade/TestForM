@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="Theme.Mymigraine" parent="@style/Theme.Sherlock.Light">
+        <item name="actionBarItemBackground">@drawable/selectable_background_mymigraine</item>
+        <item name="popupMenuStyle">@style/PopupMenu.Mymigraine</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Mymigraine</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.Mymigraine</item>
+        <item name="actionDropDownStyle">@style/DropDownNav.Mymigraine</item>
+        <item name="actionBarStyle">@style/ActionBar.Solid.Mymigraine</item>
+        <item name="actionModeBackground">@drawable/cab_background_top_mymigraine</item>
+        <item name="actionModeSplitBackground">@drawable/cab_background_bottom_mymigraine</item>
+        <item name="actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mymigraine</item>
+        <item name="titleTextStyle">@style/TitleTextStyle.Mymigraine</item>
+        <item name="android:popupMenuStyle">@style/PopupMenu.Mymigraine</item>
+        <item name="android:dropDownListViewStyle">@style/DropDownListView.Mymigraine</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle.Mymigraine</item>
+        <item name="android:actionDropDownStyle">@style/DropDownNav.Mymigraine</item>
+        <item name="android:actionBarStyle">@style/ActionBar.Solid.Mymigraine</item>
+        <item name="android:actionModeBackground">@drawable/cab_background_top_mymigraine</item>
+        <item name="android:actionModeCloseButtonStyle">@style/ActionButton.CloseMode.Mymigraine</item>
+        <item name="android:titleTextStyle">@style/TitleTextStyle.Mymigraine</item>
+        <item name="textAppearanceLargePopupMenu">@style/TextColor.ActionBarPopupLargeTextColor.Mymigraine</item>
+        <item name="android:textAppearanceLargePopupMenu">@style/TextColor.ActionBarPopupLargeTextColor.Mymigraine</item>
+        <item name="textAppearanceSmallPopupMenu">@style/TextColor.ActionBarPopupSmallTextColor.Mymigraine</item>
+        <item name="android:textAppearanceSmallPopupMenu">@style/TextColor.ActionBarPopupSmallTextColor.Mymigraine</item>
+        <item name="actionButtonStyle">@style/Padding.ActionButton.Mymigraine</item>
+        <item name="android:actionButtonStyle">@style/Padding.ActionButton.Mymigraine</item>
+        <!-- Light.DarkActionBar specific -->
+        <!-- <item name="actionBarWidgetTheme">@style/Theme.Mymigraine.Widget</item> -->
+    </style>
+
+    <style name="ActionBar.Solid.Mymigraine" parent="@style/Widget.Sherlock.Light.ActionBar.Solid.Inverse">
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="backgroundStacked">@drawable/ab_stacked_solid_mymigraine</item>
+        <item name="backgroundSplit">@drawable/actionbar_bg</item>
+        <item name="progressBarStyle">@style/ProgressBar.Mymigraine</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/actionbar_bg</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mymigraine</item>
+    </style>
+
+    <style name="ActionBar.Transparent.Mymigraine" parent="@style/Widget.Sherlock.ActionBar">
+        <item name="background">@drawable/ab_transparent_mymigraine</item>
+        <item name="progressBarStyle">@style/ProgressBar.Mymigraine</item>
+        <item name="android:background">@drawable/ab_transparent_mymigraine</item>
+        <item name="android:progressBarStyle">@style/ProgressBar.Mymigraine</item>
+    </style>
+
+    <style name="PopupMenu.Mymigraine" parent="@style/Widget.Sherlock.Light.ListPopupWindow">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mymigraine</item>
+    </style>
+
+    <style name="DropDownListView.Mymigraine" parent="@style/Widget.Sherlock.ListView.DropDown">
+        <item name="android:listSelector">@drawable/selectable_background_mymigraine</item>
+    </style>
+
+    <style name="ActionBarTabStyle.Mymigraine" parent="@style/Widget.Sherlock.ActionBar.TabView">
+        <item name="android:background">@drawable/tab_indicator_ab_mymigraine</item>
+    </style>
+
+    <style name="DropDownNav.Mymigraine" parent="@style/Widget.Sherlock.Spinner.DropDown.ActionBar">
+        <item name="android:background">@drawable/spinner_background_ab_mymigraine</item>
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel_mymigraine</item>
+        <item name="android:dropDownSelector">@drawable/selectable_background_mymigraine</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ProgressBar.Mymigraine" parent="@style/Widget.Sherlock.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/progress_horizontal_mymigraine</item>
+    </style>
+
+    <style name="ActionButton.CloseMode.Mymigraine" parent="@style/Widget.Sherlock.ActionButton.CloseMode">
+        <item name="android:background">@drawable/btn_cab_done_mymigraine</item>
+    </style>
+
+    <style name="TitleTextStyle.Mymigraine" parent="Widget.Sherlock.TextView.SpinnerItem">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextColor.ActionBarPopupLargeTextColor.Mymigraine" parent="TextAppearance.Sherlock.Light.Widget.PopupMenu.Large">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextColor.ActionBarPopupSmallTextColor.Mymigraine" parent="TextAppearance.Sherlock.Light.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Padding.ActionButton.Mymigraine" parent="Widget.Sherlock.Light.ActionButton">
+        <item name="android:minWidth">48dip</item>
+         <item name="android:paddingLeft">5dip</item>
+        <item name="android:paddingRight">5dip</item>
+    </style>
+
+    <!-- this style is only referenced in a Light.DarkActionBar based theme -->
+    <style name="Theme.Mymigraine.Widget" parent="@style/Theme.Sherlock">
+        <item name="popupMenuStyle">@style/PopupMenu.Mymigraine</item>
+        <item name="dropDownListViewStyle">@style/DropDownListView.Mymigraine</item>
+    </style>
+
+</resources>

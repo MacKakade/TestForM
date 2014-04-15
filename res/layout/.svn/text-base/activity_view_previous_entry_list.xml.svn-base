@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background" >
+
+    <ListView
+        android:id="@+id/listViewPreviousEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/list_devider_color"
+        android:listSelector="@drawable/list_selector"
+        android:dividerHeight="1dp" >
+    </ListView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@+id/listViewPreviousEntry"
+        android:layout_height="1dp"
+        android:background="@color/devider_color" />
+
+</RelativeLayout>
